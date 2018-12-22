@@ -2,7 +2,7 @@
 
 ## This script is a stop-gap for issues in the current PKS-Ninja lab template.
 
-## Execute this script immediately after deploying the v10 lab template, before you begin the lab guides.
+#### _Execute this script immediately after deploying the v10 lab template, before you begin the lab guides._
 
 ### Fixes:
 
@@ -15,6 +15,6 @@
 
     - Restrict platform deployment to Ops Man 2.3.0 and PKS 1.2.0 (~/nsx-t-ci-pipeline/pipelines/pks-params.yml)
     
-### Directions:
+## Directions:
 
 - Execute **`source cc-p1.sh`** at the command line on cli-vm
