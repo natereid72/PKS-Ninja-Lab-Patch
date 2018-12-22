@@ -8,7 +8,7 @@
 
 - CLI-VM
   - DNS name resolution
-    - Set name switch resolution to hosts file and DNS only (/etc/nsswitch.conf)
+    - Fix name switch config (/etc/nsswitch.conf)
     
   - PKS pipeline install
     - Remark out pipeline property conflicts (~/nsx-t-ci-pipeline/tasks/config-pks/task.yml, ~/nsx-t-ci-pipeline/tasks/config-pks/task.sh, ~/nsx-t-ci-pipeline/tasks/config-pks/config-pks-1.1.sh, ~/nsx-t-ci-pipeline/pipelines/install-pks-pipeline.yml, ~/nsx-t-ci-pipeline/pipelines/pks-params.yml)
@@ -17,4 +17,4 @@
     
 ### Directions:
 
-- Execute `source cc-p1.sh` at the command line on cli-vm
+- Execute **`source cc-p1.sh`** at the command line on cli-vm
