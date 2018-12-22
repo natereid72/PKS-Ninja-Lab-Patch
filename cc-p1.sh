@@ -18,3 +18,5 @@ sed -i.bak  '/mdns4/c\hosts:  files  dns' /etc/nsswitch.conf
 
 #Switch to home directory post-script
 cd ~
+ping vcsa-01a.corp.local -c 1
+echo "Patched: PKS Pipeline, clo-vm DNS client config."
