@@ -2,7 +2,7 @@
 
 ## This script is a stop-gap for issues in the current PKS-Ninja lab template.
 
-#### _Execute this script immediately after deploying the v10 lab template, before you begin the lab guides._
+#### _(Execute this script immediately after deploying the v10 lab template, before you begin the lab guides.)_
 
 ### Fixes:
 
