@@ -1,6 +1,6 @@
 # PKS-Ninja-Patch
 
-## This script is a stop-gap fix for issues in the current PKS-Ninja lab template.
+## This script is a stop-gap for issues in the current PKS-Ninja lab template.
 
 ## Use this file immediately after deploying lab v10 template.
 
