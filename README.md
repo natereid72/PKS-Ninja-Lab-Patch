@@ -1,4 +1,4 @@
-# PKS-Ninja-CC-Bandaid
+# PKS-Ninja-CC-P1
 
 ## Use this file immediately after deploying ninja lab v10 template.
 
