@@ -1,12 +1,15 @@
-# PKS-Ninja-CC-P1
+# PKS-Ninja-Patch
 
-## Use this file immediately after deploying ninja lab v10 template.
+## This script is a stop-gap fix for issues in the current PKS-Ninja lab template.
+
+## Use this file immediately after deploying lab v10 template.
 
 ### Fixes:
 
-- DNS name resolution
-- PKS pipeline install
+- CLI-VM
+  - DNS name resolution
+  - PKS pipeline install
 
 ### Directions:
 
-- Execute `source cc-bandaid.sh` at the command line on cli-vm
+- Execute `source cc-p1.sh` at the command line on cli-vm
