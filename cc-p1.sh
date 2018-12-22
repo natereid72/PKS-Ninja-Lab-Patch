@@ -15,3 +15,6 @@ sed -i  '/mdns4/c\hosts:  files  dns' /etc/nsswitch.conf
 #Unused block - Placeholder for anything that may require vSphere config changes
 #curl -k -i -u administrator@vsphere.local:VMware1! -X POST -c cookie-jar.txt https://vcenter/rest/com/vmware/cis/session
 #curl -k -i -b cookie-jar.txt https://vcenter/rest/vcenter/vm 
+
+#Switch to home directory post-script
+cd ~
