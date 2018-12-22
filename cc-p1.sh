@@ -22,4 +22,4 @@ sed -i.bak  '/mdns4/c\hosts:  files  dns' /etc/nsswitch.conf
 cd ~
 ping vcsa-01a.corp.local -c 1
 echo ""
-echo "Patched: PKS Pipeline, clo-vm DNS client config."
+echo "Patched: PKS Pipeline, cli-vm DNS client config."
