@@ -10,7 +10,7 @@ sed -i.bak '/PKS_SYSLOG/s/^/#/' ~/nsx-t-ci-pipeline/pipelines/install-pks-pipeli
 sed -i.bak '/pks_tile_syslog/s/^/#/' ~/nsx-t-ci-pipeline/pipelines/pks-params.yml
 
 #Correct name service switch config for cli-vm dns name resolution
-sed -i  '/mdns4/c\hosts:  files  dns' /etc/nsswitch.conf
+sed -i.bak  '/mdns4/c\hosts:  files  dns' /etc/nsswitch.conf
 
 #Unused block - Placeholder for anything that may require vSphere config changes
 #curl -k -i -u administrator@vsphere.local:VMware1! -X POST -c cookie-jar.txt https://vcenter/rest/com/vmware/cis/session
