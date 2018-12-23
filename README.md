@@ -18,6 +18,10 @@
     - Restrict platform deployment to Ops Man 2.3.0 and PKS 1.2.0 (~/nsx-t-ci-pipeline/pipelines/pks-params.yml)
     - Create .bak of original files in same directory
     
+### Notes:
+
+The script will create a .bak of each file before it is updated. Running the script again will reset original state before applying the patch again. If you make other changes to the affected files post-run and then rerun, your changes will be lost.
+    
 ### Directions:
 
 - Execute **`source cc-p1.sh`** at the command line on cli-vm
