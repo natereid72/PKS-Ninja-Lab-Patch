@@ -44,6 +44,6 @@ sed -i.bak  '/mdns4/c\hosts:  files  dns' /etc/nsswitch.conf
 
 #Switch to home directory post-script
 echo "=========================================="
-echo "Pathced PKS pipeline and cli-vm DNS client"
+echo "    Patched PKS Ninja v10 Template"
 echo "=========================================="
 cd ~
