@@ -21,7 +21,7 @@
     
   - Add aliases to cli-vm shell
     - pksli = pks login -a pks.corp.local -u pks-admin -p VMware1! --skip-ssl-validation
-    - pksg c= pks get-credentials
+    - pksgc = pks get-credentials
     
 ### Notes:
 
