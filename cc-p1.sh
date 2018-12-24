@@ -30,6 +30,14 @@ sed -i.bak  '/mdns4/c\hosts:  files  dns' /etc/nsswitch.conf
 #curl -k -i -u administrator@vsphere.local:VMware1! -X POST -c cookie-jar.txt https://vcsa-01a.corp.local/rest/com/vmware/cis/session
 #curl -k -i -b cookie-jar.txt https://vcsa-01a.corp.local/rest/vcenter/...
 
+#Add some aliases to make common tasks easier
+alias pksli='pks login -a pks.corp.local -u pks-admin -p VMware1! --skip-ssl-validation'
+alias pksgc='pks get-credentials'
+echo "alias pksli='pks login -a pks.corp.local -u pks-admin -p VMware1! --skip-ssl-validation'" >> ~/.bashrc
+echo "alias pksgc='pks get-credentials'" >> .bashrc
+
 #Switch to home directory post-script
+echo "=========================================="
 echo "Pathced PKS pipeline and cli-vm DNS client"
+echo "=========================================="
 cd ~
