@@ -1,12 +1,11 @@
 #!/bin/bash
 
-#Leave marker that script has ran before
-touch ~/nsx-t-ci-pipeline/.cc-p1.ran
+#Leave marker on first run. If it has run before, reset files to original state before running again
 file="~/nsx-t-ci-pipeline/.cc-p1.ran"
-
-#Check to see if script has already run and reset to original state before running again
-if [ -f "$file" ]
+if [ ! -f "$file" ]
 then
+touch ~/nsx-t-ci-pipeline/.cc-p1.ran
+else
 mv ~/nsx-t-ci-pipeline/pipelines/pks-params.yml.bak ~/nsx-t-ci-pipeline/pipelines/pks-params.yml
 mv ~/nsx-t-ci-pipeline/tasks/config-pks/task.sh.bak ~/nsx-t-ci-pipeline/tasks/config-pks/task.sh
 mv ~/nsx-t-ci-pipeline/tasks/config-pks/config-pks-1.1.sh.bak ~/nsx-t-ci-pipeline/tasks/config-pks/config-pks-1.1.sh
