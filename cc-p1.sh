@@ -1,7 +1,10 @@
 #!/bin/bash
 
+#Leave marker that script has ran before
+touch ~/nsx-t-ci-pipeline/.cc-p1.ran
+file="~/nsx-t-ci-pipeline/.cc-p1.ran"
+
 #Check to see if script has already run and reset to original state before running again
-file="~/nsx-t-ci-pipeline/pipelines/pks-params.yml.bak"
 if [ -f "$file" ]
 then
 mv ~/nsx-t-ci-pipeline/pipelines/pks-params.yml.bak ~/nsx-t-ci-pipeline/pipelines/pks-params.yml
@@ -23,6 +26,9 @@ sed -i.bak '/PKS_SYSLOG/s/^/#/' ~/nsx-t-ci-pipeline/tasks/config-pks/task.yml
 sed -i.bak '/PKS_SYSLOG/s/^/#/' ~/nsx-t-ci-pipeline/pipelines/install-pks-pipeline.yml
 sed -i '/pks_tile_syslog/s/^/#/' ~/nsx-t-ci-pipeline/pipelines/pks-params.yml
 
+#Fix configure pks pipeline that causes k8s clusters to be created in mgmta01
+sed -i 's/"value": $pks_vcenter_cluster_list/"value": "RegionA01-COMP01"/' ~/nsx-t-ci-pipeline/tasks/config-pks/config-pks-1.1.sh
+
 #Correct name service switch config for cli-vm dns name resolution
 sed -i.bak  '/mdns4/c\hosts:  files  dns' /etc/nsswitch.conf
 
@@ -31,10 +37,13 @@ sed -i.bak  '/mdns4/c\hosts:  files  dns' /etc/nsswitch.conf
 #curl -k -i -b cookie-jar.txt https://vcsa-01a.corp.local/rest/vcenter/...
 
 #Add some aliases to make common tasks easier
+if [ ! -f "$file" ]
+then
 alias pksli='pks login -a pks.corp.local -u pks-admin -p VMware1! --skip-ssl-validation'
 alias pksgc='pks get-credentials'
 echo "alias pksli='pks login -a pks.corp.local -u pks-admin -p VMware1! --skip-ssl-validation'" >> ~/.bashrc
-echo "alias pksgc='pks get-credentials'" >> .bashrc
+echo "alias pksgc='pks get-credentials'" >> ~/.bashrc
+fi
 
 #Switch to home directory post-script
 echo "=========================================="
