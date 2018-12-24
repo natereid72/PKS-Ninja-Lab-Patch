@@ -35,7 +35,7 @@ sed -i.bak '/PKS_SYSLOG/s/^/#/' ~/nsx-t-ci-pipeline/pipelines/install-pks-pipeli
 sed -i '/pks_tile_syslog/s/^/#/' ~/nsx-t-ci-pipeline/pipelines/pks-params.yml
 
 #Fix configure-pks pipeline that causes k8s clusters to be created in mgmta01
-sed -i 's/"value": $pks_vcenter_cluster_list/"value": "RegionA01-COMP01"/' ~/nsx-t-ci-pipeline/tasks/config-pks/config-pks-1.1.sh
+sed -i 's/pks_tile_vcenter_cluster_list: RegionA01-MGMT01,RegionA01-COMP01/pks_tile_vcenter_cluster_list: RegionA01-COMP01/' ~/nsx-t-ci-pipeline/pipelines/pks-params.yml
 
 #Correct name service switch config for cli-vm dns name resolution
 sed -i.bak  '/mdns4/c\hosts:  files  dns' /etc/nsswitch.conf
