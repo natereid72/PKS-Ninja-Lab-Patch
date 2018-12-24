@@ -26,7 +26,7 @@
       - Changes setting from latest releases to specific releases
     - Remove RegionA01-MGMT01 from PKS tile [Networking --> vSphere Cluster Names]
       -  ~/nsx-t-ci-pipeline/pipelines/pks-params.yml
-      - Removes MGMT cluster from list of clusters PKS shoudl deploy k8s clusters to
+      - Removes MGMT cluster from list of clusters PKS should deploy k8s clusters to
     - Create .bak of original all files in same directory
     
   - Add aliases to cli-vm shell
