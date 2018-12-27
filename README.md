@@ -32,7 +32,6 @@
   - Add aliases to cli-vm shell
     - pksli = `pks login -a pks.corp.local -u pks-admin -p VMware1! --skip-ssl-validation`
     - pksgc = `pks get-credentials`
-    - ut = `uaac target https://pks.corp.local:8443 --skip-ssl-validation`
     - Set alias in current shell and updates ~/.bashrc
     
 ### Notes:
