@@ -7,10 +7,10 @@ then
 #First run. Leave ran marker
 touch ~/nsx-t-ci-pipeline/.cc-p1.ran
 #Add some aliases to make common tasks easier
-alias pksli='pks login -a pks.corp.local -u pks-admin -p VMware1! --skip-ssl-validation'
+alias pksli='pks login -a pks.corp.local -u pksadmin -p VMware1! --skip-ssl-validation'
 alias pksgc='pks get-credentials'
 alias ut='uaac target https://pks.corp.local:8443 --skip-ssl-validation'
-echo "alias pksli='pks login -a pks.corp.local -u pks-admin -p VMware1! --skip-ssl-validation'" >> ~/.bashrc
+echo "alias pksli='pks login -a pks.corp.local -u pksadmin -p VMware1! --skip-ssl-validation'" >> ~/.bashrc
 echo "alias pksgc='pks get-credentials'" >> ~/.bashrc
 echo "alias ut='uaac target https://pks.corp.local:8443 --skip-ssl-validation'" >> ~/.bashrc
 else
