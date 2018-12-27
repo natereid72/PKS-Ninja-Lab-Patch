@@ -42,4 +42,4 @@ The script will create a .bak of each file before it is updated. Running the scr
 
 - From cli-vm command line
   - `git clone https://github.com/natereid72/PKS-Ninja-Lab-Patch.git`
-  - `./PKS-Ninja-Lab-Patch/source cc-p1.sh`
+  - `source ./PKS-Ninja-Lab-Patch/cc-p1.sh`
