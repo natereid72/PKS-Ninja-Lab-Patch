@@ -1,4 +1,4 @@
-<!--> test reveal.js</!-->
+<!-- test reveal.js -->
 <section data-markdown>
 
 # PKS-Ninja-Patch
@@ -8,7 +8,7 @@
 #### _(Execute this script immediately after deploying the v10 lab template, before you begin the lab guides.)_
 
 </section>
-<!--> end of test reveal.js</!-->
+<!-- end of test reveal.js -->
 ### Fixes:
 
 - CLI-VM
