@@ -1,8 +1,14 @@
+<!-- test reveal.js>
+<section data-markdown>
+
 # PKS-Ninja-Patch
 
 ## This script is a stop-gap for issues in the current (v10) PKS-Ninja lab template.
 
 #### _(Execute this script immediately after deploying the v10 lab template, before you begin the lab guides.)_
+
+</section>
+</!-->
 
 ### Fixes:
 
